@@ -1,0 +1,50 @@
+[
+    {
+        "keys": ["ctrl+f9"],
+        "command": "dummy"
+    },
+
+    {
+        "keys": ["f9"],
+        "command": "dummy"
+    },
+
+    {
+        "keys": ["ctrl+shift+b"],
+        "command": "dummy"
+    },
+
+    {
+        "keys": ["ctrl+b"],
+        "command": "dummy"
+    },
+
+	{ "keys": ["ctrl+shift+;"], "command": "sort_lines", "args": {"case_sensitive": false} },
+
+	{ "keys": ["ctrl+shift+'"], "command": "sort_lines", "args": {"case_sensitive": true} },
+
+    { "keys": ["f9"], "command": "build", "args": {"select": true} },
+
+    { "keys": ["ctrl+f9"], "command": "build" },
+
+    {
+        "keys": ["ctrl+alt+l"],
+        "command": "set_max_columns",
+        "args": {"columns": 2}
+    },
+
+
+    { 
+        "keys": ["f9"],
+        "command": "chain",
+        "args": {
+            "commands": [
+                ["focus_group", {"group": 0}],
+                ["build", {"select": true}],
+                ["set_layout", { "cols": [0.0, 0.33, 0.66, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1], [1, 0, 2, 1], [2, 0, 3, 1]] }],
+                ["set_max_columns", {"columns": 2}],
+                ["focus_group", {"group": 1}],
+            ]
+        }   
+    },
+]
